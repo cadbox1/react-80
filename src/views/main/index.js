@@ -7,6 +7,10 @@ import Dashboard from '../dashboard/index.js';
 import Settings from '../settings/index.js';
 
 class main extends React.Component {
+  static contextTypes = {
+    muiTheme: React.PropTypes.object
+  };
+
   constructor(props) {
     super(props);
   }
@@ -34,9 +38,5 @@ class main extends React.Component {
     );
   }
 }
-
-main.contextTypes = {
-  muiTheme: React.PropTypes.object
-};
 
 export default main;
