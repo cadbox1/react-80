@@ -1,6 +1,6 @@
 import React from 'react';
 import { Match, Link } from 'react-router';
-import { Drawer, MenuItem, AppBar, Toolbar } from 'material-ui';
+import { Drawer, MenuItem, AppBar, Toolbar, ToolbarTitle } from 'material-ui';
 import './index.css';
 
 import Dashboard from '../dashboard/index.js';
@@ -21,7 +21,7 @@ class main extends React.Component {
         <div className="App-sidebar">
           <Drawer>
             <Toolbar style={{backgroundColor: this.context.muiTheme.palette.primary1Color}}>
-              <h2>React-80</h2>
+              <ToolbarTitle text="React-80" />
             </Toolbar>
             <MenuItem style={{ textAlign: "left" }}><Link to="/">Dashboard</Link></MenuItem>
             <MenuItem style={{ textAlign: "left" }}><Link to="/settings">Settings</Link></MenuItem>
