@@ -20,15 +20,19 @@ class main extends React.Component {
       <div className="App">
         <div className="App-sidebar">
           <Drawer>
-            <Toolbar style={{backgroundColor: this.context.muiTheme.palette.primary1Color}}>
+            <Toolbar style={{ backgroundColor: this.context.muiTheme.palette.primary1Color }}>
               <ToolbarTitle text="React-80" />
             </Toolbar>
-            <MenuItem style={{ textAlign: "left" }}><Link to="/">Dashboard</Link></MenuItem>
-            <MenuItem style={{ textAlign: "left" }}><Link to="/settings">Settings</Link></MenuItem>
+            <Link to="/">
+							<MenuItem style={{ textAlign: "left" }} primaryText="Dashboard"/>
+						</Link>
+						<Link to="/settings">
+            	<MenuItem style={{ textAlign: "left" }} primaryText="Settings" />
+						</Link>
           </Drawer>
         </div>
         <div className="App-main">
-          <Toolbar style={{backgroundColor: this.context.muiTheme.palette.primary1Color}} />
+          <Toolbar style={{ backgroundColor: this.context.muiTheme.palette.primary1Color }} />
           <div className="App-body">
             <Match exactly pattern="/" component={Dashboard} />
             <Match pattern="/settings" component={Settings} />
