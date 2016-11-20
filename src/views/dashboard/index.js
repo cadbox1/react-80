@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { AppBar } from 'material-ui';
 import { Match, Link } from 'react-router';
 
-const dashboard = () => {
+const dashboard = (props) => {
   return (
     <div id="dashboard" className="Dashboard">
-      <h1>Dashboard</h1>
+      <AppBar title="Dashboard" onLeftIconButtonTouchTap={ props.toggleSidebar } />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Match } from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Main from  "./views/main/index.js";
+import './App.css';
 
 injectTapEventPlugin();
 
