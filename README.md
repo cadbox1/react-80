@@ -1,3 +1,10 @@
+# React-80
+A project to attempt to cover 80% of React CRUD apps by Cadell Christo.
+
+Available at [https://cadc.github.io/react-80/](https://cadc.github.io/react-80/)
+
+## create-react-app
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

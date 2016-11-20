@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { HashRouter } from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Main from  "./views/main/index.js";
@@ -8,11 +8,11 @@ import './App.css';
 injectTapEventPlugin();
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <MuiThemeProvider>
       <Main />
     </MuiThemeProvider>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
