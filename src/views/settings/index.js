@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { AppBar } from 'material-ui';
 import { Match, Link } from 'react-router';
 
-const settings = () => {
+const settings = (props) => {
   return (
     <div id="settings" className="Settings">
-      <h1>Settings</h1>
+      <AppBar title="Settings" onLeftIconButtonTouchTap={ props.toggleSidebar } />
     </div>
   );
 }
