@@ -1,7 +1,6 @@
 import React from 'react';
 import { Match, Link } from 'react-router';
-import { Drawer, MenuItem, AppBar, Toolbar, List, ListItem, Divider, Avatar, IconMenu, IconButton } from 'material-ui';
-import NavigationExpandMoreIcon from 'material-ui/svg-icons/navigation/expand-more';
+import { Drawer, List, ListItem, Divider, Avatar } from 'material-ui';
 import './index.css';
 import Logo from "./logo.svg";
 
