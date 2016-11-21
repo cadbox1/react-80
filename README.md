@@ -1,5 +1,5 @@
 # React-80
-A project to attempt to cover 80% of React CRUD apps by Cadell Christo.
+A project to standardise the most common parts of CRUD apps. Written in React by Cadell Christo.
 
 Available at [https://cadc.github.io/react-80/](https://cadc.github.io/react-80/)
 
