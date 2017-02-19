@@ -1,6 +1,13 @@
 import React from 'react';
-import { Match, Link } from 'react-router';
-import { Drawer, List, ListItem, Divider, Avatar } from 'material-ui';
+import { Route, Link } from 'react-router-dom';
+import Avatar from "material-ui/Avatar";
+import Drawer from "material-ui/Drawer";
+import {
+	List,
+	ListItem,
+	ListItemText,
+    ListItemIcon,
+} from "material-ui/List";
 import './index.css';
 import Logo from "./logo.svg";
 
@@ -24,6 +31,7 @@ class main extends React.Component {
     this.mql = window.matchMedia(`(min-width: 800px)`);
     this.mql.addListener(this.handleScreenSize);
     this.handleScreenSize();
+    console.log('hi');
   }
 
   componentWillUnmount() {
@@ -59,29 +67,26 @@ class main extends React.Component {
               onRequestChange={this.setShowSidebar}
             >
             <List>
-              <ListItem
-                primaryText="Cadell Christo"
-                leftAvatar={<Avatar src={Logo} />}
-                primaryTogglesNestedList={true}
-                nestedItems={[
-                  <ListItem key={1} primaryText="My Profile" />,
-                  <ListItem key={2} primaryText="Sign out" />,
-                ]}
-              />
-              <Divider />
-              <Link className="Main-menu-item" to="/">
-  							<ListItem primaryText="Dashboard" />
-  						</Link>
-  						<Link className="Main-menu-item" to="/settings">
-              	<ListItem primaryText="Settings" />
-  						</Link>
+              <ListItem button>
+                <ListItemIcon>
+                  <Avatar src={Logo} />
+                </ListItemIcon>
+                <ListItemText primary="Cadell Christo" />
+              </ListItem>
+              {/*<Divider />*/}
+              {/*<Link className="Main-menu-item" to="/">*/}
+  							{/*<ListItem primaryText="Dashboard" />*/}
+  						{/*</Link>*/}
+  						{/*<Link className="Main-menu-item" to="/settings">*/}
+              	{/*<ListItem primaryText="Settings" />*/}
+  						{/*</Link>*/}
             </List>
           </Drawer>
         </div>
-        <div className="Main-content" style={{marginLeft: showSidebar ? "256px" : 0}}>
-          <Match exactly pattern="/" component={() => <Dashboard toggleSidebar={this.toggleSidebar} />} />
-          <Match pattern="/settings" component={() => <Settings toggleSidebar={this.toggleSidebar} />} />
-        </div>
+        {/*<div className="Main-content" style={{marginLeft: showSidebar ? "256px" : 0}}>*/}
+          {/*<Route exactly path="/" component={() => <Dashboard toggleSidebar={this.toggleSidebar} />} />*/}
+          {/*<Route path="/settings" component={() => <Settings toggleSidebar={this.toggleSidebar} />} />*/}
+        {/*</div>*/}
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter } from 'react-router';
+import { HashRouter } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Main from  "./views/main/index.js";
